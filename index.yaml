@@ -1,15 +1,6 @@
-apiVersion: v1
+apiVersion: v2
 entries:
   gen-chart:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2022-11-25T21:41:05.054753493Z"
-    description: A Helm chart for Kubernetes
-    digest: c4b6782ce8681c4e9b47ed4dc3362fc381580f82c22d2b25f892bef6028b7169
-    name: gen-chart
-    urls:
-    - https://github.com/arulkumarkandasamy/helm-chart-repo/releases/download/gen-chart-0.1.0/gen-chart-0.1.0.tgz
-    version: 0.1.0
   - apiVersion: v2
     appVersion: 0.2.0
     created: "2022-11-27T14:50:28.429575067Z"
@@ -18,5 +9,5 @@ entries:
     name: gen-chart
     urls:
     - https://github.com/arulkumarkandasamy/helm-chart-repo/releases/download/gen-chart-0.2.0/gen-chart-0.2.0.tgz
-    version: 0.1.0
+    version: 0.2.0
 generated: "2022-11-25T21:41:04.498832114Z"

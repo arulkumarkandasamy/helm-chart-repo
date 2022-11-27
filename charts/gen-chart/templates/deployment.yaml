@@ -31,7 +31,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- with .Values.imagePullSecrets }}
           imagePullSecrets:
-          {{- toYaml . | nindent 8 }}
+            {{- toYaml . | nindent 8 }}
           {{- end }}
           ports:
           {{- range $name, $port := .Values.container.ports }}
@@ -40,8 +40,9 @@ spec:
               containerPort: {{ $port.internal }}
               protocol: {{ default "TCP" $port.protocol  }}
           {{- end }}
+          {{- end }}
           {{- with .Values.probes }}
-          {{ toYaml . | indent 8 }}
+            {{- toYaml . | indent 8 }}
           {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}

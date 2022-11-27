@@ -48,7 +48,7 @@ spec:
               path: {{ .Values.readiness.path }}
               port: {{ .Values.readiness.port }}
             initialDelaySeconds: {{ .Values.readiness.initialDelaySeconds }}
-            periodSeconds: {{ .Values.readines.periodSeconds }}
+            periodSeconds: {{ .Values.readiness.periodSeconds }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

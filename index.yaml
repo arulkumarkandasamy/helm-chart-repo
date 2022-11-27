@@ -10,4 +10,13 @@ entries:
     urls:
     - https://github.com/arulkumarkandasamy/helm-chart-repo/releases/download/gen-chart-0.1.0/gen-chart-0.1.0.tgz
     version: 0.1.0
+  - apiVersion: v2
+    appVersion: 0.2.0
+    created: "2022-11-27T14:50:28.429575067Z"
+    description: A Helm chart for Kubernetes
+    digest: 270506aca0e8bbccbd8ce18dcd14b5e8f0b9de561f3da9bc5734cf935175ae0b
+    name: gen-chart
+    urls:
+    - https://github.com/arulkumarkandasamy/helm-chart-repo/releases/download/gen-chart-0.2.0/gen-chart-0.2.0.tgz
+    version: 0.1.0
 generated: "2022-11-25T21:41:04.498832114Z"

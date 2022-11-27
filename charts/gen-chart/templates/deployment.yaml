@@ -31,12 +31,15 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           {{- with .Values.imagePullSecrets }}
           imagePullSecrets:
-            {{- toYaml . | nindent 8 }}
+          {{- toYaml . | nindent 8 }}
           {{- end }}
           ports:
-            - name: http
-              containerPort: "{{ .Values.container.port }}"
-              protocol: TCP
+          {{- range $name, $port := .Values.container.ports }}
+          {{- if $port }}
+            - name: {{ $name }}
+              containerPort: {{ $port.internal }}
+              protocol: {{ default "TCP" $port.protocol  }}
+          {{- end }}
           {{- with .Values.probes }}
           {{ toYaml . | indent 8 }}
           {{- end }}
